@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-
 sealed class ServiceMethods{
-
-
   static makeBorder(List<int>borderList, int row, int column) {
     for (int i = 0; i < column; i++) {
       if (!borderList.contains(i)) borderList.add(i);

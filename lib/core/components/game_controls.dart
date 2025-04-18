@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../screen/home.dart';
-
-enum Direction { up, down, left, right }
+import '../../app_state/change_notifier.dart';
 
 class GameControls extends StatelessWidget {
   final double screenWidth;
   final int score;
   final Direction direction;
   final void Function(Direction) onDirectionChanged;
-  const GameControls({required this.screenWidth, required this.score, required this.direction, required this.onDirectionChanged, super.key});
+  const GameControls({
+    required this.screenWidth,
+    required this.score,
+    required this.direction,
+    required this.onDirectionChanged,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -67,4 +71,3 @@ class GameControls extends StatelessWidget {
     );
   }
 }
-
